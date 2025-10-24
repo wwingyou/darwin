@@ -29,9 +29,15 @@ for file in $(find build -type f); do
   sed -i '' "s|{platform}|$platform|g" $file
 done
 
+# Temporarily track build dir in git to resolve error
+git add -f build
+
 # Rebuild with hydrated configuration
 if command -v darwin-rebuild >/dev/null 2>&1; then
   sudo darwin-rebuild switch --flake ./build
 else
   sudo nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch --flake.build
 fi
+
+# Untrack build directory from git
+git rm --cached -r build >/dev/null 2>&1
