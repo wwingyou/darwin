@@ -49,7 +49,7 @@ in {
     if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
       ${pkgs.git}/bin/git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     fi
-    ${clone "https://github.com/wwingyou/javavims" "$HOME/.config/nvim"}
+    ${clone "https://github.com/wwingyou/minivim" "$HOME/.config/nvim"}
   '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
