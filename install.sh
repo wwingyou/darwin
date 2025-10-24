@@ -1,9 +1,18 @@
 #!/bin/bash
 
+username=$(whoami)
+hostname=$(scutil --get LocalHostName)
+homedir="$HOME"
+platform="aarch64-darwin" # TODO: Handle different architectures
+
 # Install prerequisites
 if ! command -v brew >/dev/null 2>&1; then
   # Install homebrew
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  # Post processing
+  echo >> /Users/${username}/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/${username}/.zprofile
 fi
 if ! command -v nix >/dev/null 2>&1; then
   # Install nix
@@ -17,11 +26,6 @@ rm -rf build
 cp -r src build
 
 # Hydrate source
-username=$(whoami)
-hostname=$(scutil --get LocalHostName)
-homedir="$HOME"
-platform="aarch64-darwin" # TODO: Handle different architectures
-
 for file in $(find build -type f); do
   sed -i '' "s|{username}|$username|g" $file
   sed -i '' "s|{hostname}|$hostname|g" $file
