@@ -65,6 +65,7 @@ in {
     ".oh-my-zsh/custom/themes/spaceship.zsh-theme".source = "${spaceship}/spaceship.zsh-theme";
     ".oh-my-zsh/custom/themes/spaceship-prompt".source = "${spaceship}";
     ".spaceshiprc.zsh".source = dotfiles/spaceshiprc.zsh;
+    ".ideavimrc".source = dotfiles/ideavimrc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
