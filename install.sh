@@ -36,7 +36,7 @@ git add -f build
 if command -v darwin-rebuild >/dev/null 2>&1; then
   sudo darwin-rebuild switch --flake ./build
 else
-  sudo nix --extra-experimental-features "nix-command flakes" run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch --flake.build
+  sudo nix --extra-experimental-features "nix-command flakes" run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch --flake ./build
 fi
 
 # Untrack build directory from git
