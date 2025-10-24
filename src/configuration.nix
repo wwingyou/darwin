@@ -103,6 +103,7 @@
       "intellij-idea"
       "chatgpt"
       "raycast"
+      "arc"
     ];
   };
   
