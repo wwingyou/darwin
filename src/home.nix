@@ -53,6 +53,13 @@ in {
     ${clone "https://github.com/wwingyou/minivim" "$HOME/.config/nvim"}
   '';
 
+  home.activation.makeCustomFiles = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    if [ ! -f "$HOME/.zshrc_custom" ]; then
+      touch "$HOME/.zshrc_custom"
+      echo "# zshrc logic that is out of darwin management should be placed here." > "$HOME/.zshrc_custom"
+    fi
+  '';
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
