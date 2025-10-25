@@ -42,6 +42,7 @@ in {
     obsidian
     aerospace
     httpie
+    ripgrep
   ];
 
   # Execute once when darwin-rebuild switch runs
