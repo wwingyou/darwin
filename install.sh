@@ -47,4 +47,4 @@ fi
 git rm --cached -r build >/dev/null 2>&1
 
 # After Install configurations
-open -na "IntelliJ IDEA.app" --args installPlugins IdeaVIM org.jetbrains.IdeaVim-EasyMotion eu.theblob42.idea.whichkey
+open -na "IntelliJ IDEA.app" --args installPlugins IdeaVIM org.jetbrains.AceJump IdeaVim-EasyMotion eu.theblob42.idea.whichkey
