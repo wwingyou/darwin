@@ -131,6 +131,10 @@ in {
 
   programs.obsidian = {
     enable = true;
+    vaults."note" = {
+      enable = true;
+      target = "Notes";
+    };
   };
 
   programs.aerospace = {
