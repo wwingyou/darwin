@@ -101,6 +101,7 @@
     ];
     casks = [
       "intellij-idea"
+      "datagrip"
       "chatgpt"
       "raycast"
       "arc"
