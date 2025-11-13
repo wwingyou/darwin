@@ -43,6 +43,7 @@ in {
     aerospace
     httpie
     ripgrep
+    lazygit
   ];
 
   # Execute once when darwin-rebuild switch runs
@@ -116,6 +117,7 @@ in {
 
     shellAliases = {
       vim = "nvim";
+      lg = "lazygit";
     };
 
     envExtra = builtins.readFile dotfiles/zsh/env.zsh;
@@ -189,6 +191,9 @@ in {
         alt-9 = "workspace 9";
         alt-s = "workspace S";
         alt-m = "workspace M";
+        alt-n = "workspace N";
+        alt-b = "workspace B";
+        alt-t = "workspace T";
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
         alt-shift-1 = [ "move-node-to-workspace 1" "workspace 1" ];
@@ -200,7 +205,11 @@ in {
         alt-shift-7 = [ "move-node-to-workspace 7" "workspace 7" ];
         alt-shift-8 = [ "move-node-to-workspace 8" "workspace 8" ];
         alt-shift-9 = [ "move-node-to-workspace 9" "workspace 9" ];
+        alt-shift-s = [ "move-node-to-workspace S" "workspace S" ];
         alt-shift-m = [ "move-node-to-workspace M" "workspace M" ];
+        alt-shift-n = [ "move-node-to-workspace N" "workspace N" ];
+        alt-shift-b = [ "move-node-to-workspace B" "workspace B" ];
+        alt-shift-t = [ "move-node-to-workspace T" "workspace T" ];
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
         alt-tab = "workspace-back-and-forth";
@@ -208,5 +217,9 @@ in {
         alt-shift-enter = "move-workspace-to-monitor --wrap-around next";
       };
     };
+  };
+
+  programs.lazygit = {
+    enable = true;
   };
 }
