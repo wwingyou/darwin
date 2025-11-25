@@ -54,28 +54,36 @@ vmap gte :! sql-to-entity<CR>
 
 set clipboard=unnamedplus
 
-map <leader>e <Action>(ShowIntentionActions)
-map gd <Action>(GotoDeclaration)
-map gi <Action>(GotoImplementation)
-map <leader>fr <Action>(RecentFiles)
-map <leader>ff <Action>(GotoFile)
-map <leader>fs <Action>(GotoSymbol)
-map <leader>fc <Action>(GotoClass)
-map <leader>fg <Action>(TextSearchAction)
-map <leader>rr <Action>(Run)
-map <leader>rd <Action>(Debug)
-map <leader>rs <Action>(Stop)
-map <C-B> <Action>(ToggleLineBreakpoint)
-map <leader>rt <Action>(RunClass)
-map <leader>dt <Action>(DebugClass)
-map <C-7> <Action>(Resume)
-map <C-8> <Action>(StepOver)
-map <C-9> <Action>(StepInto)
-map <C-0> <Action>(StepOut)
+nmap <leader>e <Action>(ShowIntentionActions)
+nmap gd <Action>(GotoDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap <leader>fr <Action>(RecentFiles)
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fs <Action>(GotoSymbol)
+nmap <leader>fc <Action>(GotoClass)
+nmap <leader>fg <Action>(TextSearchAction)
+nmap <leader>rr <Action>(Run)
+nmap <leader>rd <Action>(Debug)
+nmap <leader>rs <Action>(Stop)
+nmap <C-B> <Action>(ToggleLineBreakpoint)
+nmap <leader>rt <Action>(RunClass)
+nmap <leader>dt <Action>(DebugClass)
+nmap <C-7> <Action>(Resume)
+nmap <C-8> <Action>(StepOver)
+nmap <C-9> <Action>(StepInto)
+nmap <C-0> <Action>(StepOut)
 nmap R <Action>(RenameElement)
 nmap <C-L> <Action>(NextSplitter)
 nmap <C-H> <Action>(PrevSplitter)
 
+" Incremental selection
+nnoremap <C-m> :action EditorSelectWord<CR>
+nnoremap <C-l> :action EditorUnSelectWord<CR>
+
+" Visual mode에서도 확장/축소 가능하게
+vnoremap <C-m> :action EditorSelectWord<CR>
+vnoremap <C-l> :action EditorUnSelectWord<CR>
+
 " Easymotion keymaps
-nmap f <Plug>(easymotion-f)
-nmap F <Plug>(easymotion-F)
+map f <Plug>(easymotion-f)
+map F <Plug>(easymotion-F)
