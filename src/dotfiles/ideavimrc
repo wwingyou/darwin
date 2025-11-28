@@ -75,6 +75,7 @@ nmap <C-0> <Action>(StepOut)
 nmap R <Action>(RenameElement)
 nmap <C-L> <Action>(NextSplitter)
 nmap <C-H> <Action>(PrevSplitter)
+nmap Q <Action>(ToggleBookmark)<Action>(EditBookmark)
 
 " Incremental selection
 nnoremap <C-m> :action EditorSelectWord<CR>
