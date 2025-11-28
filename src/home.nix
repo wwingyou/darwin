@@ -194,6 +194,8 @@ in {
         alt-n = "workspace N";
         alt-b = "workspace B";
         alt-t = "workspace T";
+        alt-q = "workspace Q";
+        alt-r = "workspace R";
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
         alt-shift-1 = [ "move-node-to-workspace 1" "workspace 1" ];
@@ -210,6 +212,8 @@ in {
         alt-shift-n = [ "move-node-to-workspace N" "workspace N" ];
         alt-shift-b = [ "move-node-to-workspace B" "workspace B" ];
         alt-shift-t = [ "move-node-to-workspace T" "workspace T" ];
+        alt-shift-q = [ "move-node-to-workspace Q" "workspace Q" ];
+        alt-shift-r = [ "move-node-to-workspace R" "workspace R" ];
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
         alt-tab = "workspace-back-and-forth";
