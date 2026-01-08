@@ -85,6 +85,9 @@ nnoremap <C-l> :action EditorUnSelectWord<CR>
 vnoremap <C-m> :action EditorSelectWord<CR>
 vnoremap <C-l> :action EditorUnSelectWord<CR>
 
+" Column align
+vnoremap ga :action CodeColumnAlign.AlignAction<CR>
+
 " Easymotion keymaps
 map f <Plug>(easymotion-f)
 map F <Plug>(easymotion-F)
