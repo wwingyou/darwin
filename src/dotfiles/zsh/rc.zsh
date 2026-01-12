@@ -26,3 +26,5 @@ function chpwd() {
     fi
   fi
 }
+
+export EDITOR="nvim"
