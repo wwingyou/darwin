@@ -91,3 +91,6 @@ vnoremap ga :action CodeColumnAlign.AlignAction<CR>
 " Easymotion keymaps
 map f <Plug>(easymotion-f)
 map F <Plug>(easymotion-F)
+
+" Extract method
+vnoremap <leader>m :'<,'>action ExtractMethod<CR>
